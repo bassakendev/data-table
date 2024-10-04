@@ -54,7 +54,7 @@ export default function DataTable() {
                 </div>
             )}
 
-            {!loading && (<main className='px-32'>
+            {!loading && (<main className='p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16'>
                 <h1 className="text-3xl font-bold mb-6">Users List</h1>
                 <div className='flex flex-row justify-between'>
                     <div className="flex mb-4 items-center">
