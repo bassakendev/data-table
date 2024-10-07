@@ -1,4 +1,4 @@
-import { User } from "../core/types/user";
+import { User } from "../../core/types/user";
 
 interface UserTableProps {
     users: User[];

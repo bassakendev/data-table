@@ -1,12 +1,12 @@
 "use client";
 
 // pages/index.tsx
+import Filter from '@/src/components/data-table/Filter';
+import Pagination from '@/src/components/data-table/Pagination';
+import UserTable from '@/src/components/data-table/UserTable';
 import { UserService } from '@/src/core/services/user_service/service';
 import { useEffect, useState } from 'react';
 import { FaUser } from 'react-icons/fa';
-import Filter from '../../components/Filter';
-import Pagination from '../../components/Pagination';
-import UserTable from '../../components/UserTable';
 import { User } from '../../core/types/user';
 
 export default function DataTable() {

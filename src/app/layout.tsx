@@ -14,12 +14,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className='antialiased bg-gradient-to-tr from-blue-50 to-blue-100'
+        className='antialiased bg-secondary font-sans'
       >
         {children}
       </body>
-      <footer className="mt-auto text-gray-500 text-sm py-6 text-center">
-        © 2024 - Data table Next.js
+      <footer className="mt-auto text-white text-sm pt-8 pb-10 flex justify-around h-14 bg-secondary">
+        <div>© 2024 Kub, Tous Droits Réservés.</div>
+        <div className="flex justify-evenly w-96">
+          <div className="hover:text-primary hover:cursor-pointer">A propos</div>
+          <div className="hover:text-primary hover:cursor-pointer">Politique de confidentialité</div>
+        </div>
       </footer>
     </html>
   );

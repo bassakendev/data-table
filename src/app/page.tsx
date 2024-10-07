@@ -21,6 +21,13 @@ export default function HomePage() {
             View user list
           </div>
         </Link>
+
+        {/* home page */}
+        <Link href="/kub">
+          <div className="mt-5 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            Home
+          </div>
+        </Link>
       </main>
     </div>
   );
