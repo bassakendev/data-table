@@ -1,3 +1,4 @@
+import '@fontsource/roboto';
 import { Metadata } from "next";
 import "../styles/globals.css";
 

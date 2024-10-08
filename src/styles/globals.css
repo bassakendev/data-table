@@ -4,6 +4,11 @@
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
 
+html,
+body,
+footer {
+    @apply font-roma;
+}
 .loader-container {
     display: flex;
     justify-content: center;
@@ -21,6 +26,23 @@
     animation: spin 1s linear infinite;
 }
 
+.alice-carousel .alice-carousel__dots .alice-carousel__dots-item {
+    height: 10px;
+    /* Ajustez la taille si nécessaire */
+    width: 10px;
+    /* Ajustez la taille si nécessaire */
+    border-radius: 50%;
+    @apply bg-customgray !important;
+    /* Couleur par défaut */
+    margin: 0 5px;
+    /* Espacement entre les dotss */
+    transition: background-color 0.3s;
+}
+
+.alice-carousel .alice-carousel__dots .__active {
+    @apply bg-primary !important
+    /* Utilisez votre couleur primaire */
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);

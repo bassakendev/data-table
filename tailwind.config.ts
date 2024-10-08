@@ -14,6 +14,11 @@ const config: Config = {
         tertiary: '#f2f2f2',
         customgray: '#797979'
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        serif: ['Poppins', 'serif'],
+        roma: ['Montserrat', 'serif'],
+      },
     },
   },
   plugins: [],

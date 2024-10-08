@@ -2,6 +2,7 @@
 
 import React, { MouseEventHandler, useState } from 'react';
 import { FaCalendarAlt, FaHandshake, FaKey, FaMoneyBillAlt, FaTools, FaUserTie } from 'react-icons/fa';
+import AnimatedDive from '../common/AnimatedDive';
 
 interface FeatureProps {
     title: string,
@@ -13,15 +14,17 @@ interface FeatureProps {
 
 const FeatureCard: React.FC<FeatureProps> = ({ title, description, icon, isSelected, onClick }) => {
     return (
-        <div
+        <AnimatedDive
+        >
+            <div 
             className={`flex flex-col items-center justify-center p-5 h-40 w-64 border-2 transition-all cursor-pointer ${isSelected ? 'border-primary' : 'border-white'
                 } hover:border-primary hover:bg-primary hover:bg-opacity-20`}
-            onClick={onClick}
-        >
+                onClick={onClick}>
             <div className={`${isSelected ? 'text-primary' : 'text-white'} text-6xl mb-4`}>{icon}</div>
             <h3 className={`${isSelected ? 'text-primary' : 'text-white'} text-base font-bold`}>{title}</h3>
             <p className={`${isSelected ? 'text-primary' : 'text-gray-400'} text-xs text-center`}>{description}</p>
-        </div>
+            </div>
+        </AnimatedDive>
     );
 };
 

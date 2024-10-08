@@ -1,4 +1,5 @@
 import { FaCheckCircle } from 'react-icons/fa';
+import AnimatedDive from '../common/AnimatedDive';
 
 
 interface ServiceProps {
@@ -48,7 +49,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ title, itemsManagedByKub, itemsMa
 const Services = () => {
     return (
         <div className="flex flex-wrap justify-center gap-8 py-10 w-[100%] opacity-95">
-            <ServiceCard
+            <AnimatedDive initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }}><ServiceCard
                 title="VIP"
                 itemsManagedByKub={[
                     "Vidange mensuelle",
@@ -60,7 +61,8 @@ const Services = () => {
                 itemsManagedByOwner={[
                     "Assurance et vignette",
                 ]}
-            />
+            /></AnimatedDive>
+            <AnimatedDive initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }}>
             <ServiceCard
                 title="MVP"
                 itemsManagedByKub={[
@@ -74,6 +76,7 @@ const Services = () => {
                     "Entretien de la transmission et de la distribution",
                 ]}
             />
+            </AnimatedDive>
         </div>
     );
 };
