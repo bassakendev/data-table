@@ -1,7 +1,8 @@
+import LangProps from '@/src/props/LangProps';
 import { FaHandshake, FaMoneyBillAlt, FaPen, FaUserFriends } from 'react-icons/fa';
 import AnimatedDive from '../common/AnimatedDive';
 
-const Process = () => {
+const Process: React.FC<LangProps> = ({ t }) => {
     return (
         <div className="flex flex-wrap justify-center space-x-6 mt-10 opacity-95">
             {/* Step 1 */}
@@ -11,7 +12,7 @@ const Process = () => {
                 </div>
                 <FaPen className="text-primary text-4xl mb-4" />
                 <p className="text-sm font-semibold">
-                    Remplissez le formulaire ci-dessous en fournissant les informations demandées et cliquez sur le bouton « Prendre rendez-vous ».
+                    {t('our_process.complete_form')}
                 </p>
             </AnimatedDive>
 
@@ -22,7 +23,7 @@ const Process = () => {
                 </div>
                 <FaUserFriends className="text-primary text-4xl mb-4" />
                 <p className="text-sm text-secondary font-bold">
-                    Notre équipe <strong>FLEET</strong> prendra contact avec vous sous <strong>48h</strong> pour répondre à toutes vos préoccupations et signer le contrat.
+                    {t('our_process.our_team')}
                 </p>
             </AnimatedDive>
 
@@ -33,7 +34,7 @@ const Process = () => {
                 </div>
                 <FaHandshake className="text-primary text-4xl mb-4" />
                 <p className="text-sm font-semibold">
-                    Vous mettez la voiture à la disposition de Kub.
+                    {t('our_process.kub_disposal')}
                 </p>
             </AnimatedDive>
 
@@ -44,7 +45,7 @@ const Process = () => {
                 </div>
                 <FaMoneyBillAlt className="text-primary text-4xl mb-4" />
                 <p className="text-sm text-secondary font-bold">
-                    Vous recevez chaque 10 du mois, votre virement bancaire mensuel.
+                    {t('our_process.receive')}
                 </p>
             </AnimatedDive>
         </div>

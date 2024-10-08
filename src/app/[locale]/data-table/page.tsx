@@ -7,7 +7,7 @@ import UserTable from '@/src/components/data-table/UserTable';
 import { UserService } from '@/src/core/services/user_service/service';
 import { useEffect, useState } from 'react';
 import { FaUser } from 'react-icons/fa';
-import { User } from '../../core/types/user';
+import { User } from '../../../core/types/user';
 
 export default function DataTable() {
     const [users, setUsers] = useState<User[]>([]);
@@ -47,7 +47,7 @@ export default function DataTable() {
     const handlePageChange = (page: number) => setCurrentPage(page);
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen text-white">
             {loading && (
                 <div className="loader-container">
                     <div className="loader"></div>
@@ -57,7 +57,7 @@ export default function DataTable() {
             {!loading && (<main className='p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16'>
                 <h1 className="text-3xl font-bold mb-6">Users List</h1>
                 <div className='flex flex-row justify-between'>
-                    <div className="flex mb-4 items-center">
+                    <div className="flex mb-4 items-center ">
                         <label>
                             Users per page :
                             <select
@@ -66,7 +66,7 @@ export default function DataTable() {
                                     setItemsPerPage(Number(e.target.value));
                                     setCurrentPage(1);
                                 }}
-                                className="ml-2 p-2 border rounded-lg outline-none border-green-600"
+                                className="ml-2 p-2 border text-black rounded-lg outline-none border-green-600"
                             >
                                 <option value={5}>5</option>
                                 <option value={10}>10</option>

@@ -1,5 +1,6 @@
 "use client";
 
+import LangProps from '@/src/props/LangProps';
 import React, { MouseEventHandler, useState } from 'react';
 import { FaCalendarAlt, FaHandshake, FaKey, FaMoneyBillAlt, FaTools, FaUserTie } from 'react-icons/fa';
 import AnimatedDive from '../common/AnimatedDive';
@@ -28,38 +29,38 @@ const FeatureCard: React.FC<FeatureProps> = ({ title, description, icon, isSelec
     );
 };
 
-const Features = () => {
+const Features: React.FC<LangProps> = ({ t }) => {
     const [selectedFeature, setSelectedFeature] = useState(0);
 
     const features = [
         {
-            title: 'Vous avez le contrôle',
-            description: 'Vous restez le propriétaire de votre véhicule.',
+            title: t('offers.offer_1.title'),
+            description: t('offers.offer_1.description'),
             icon: <FaKey />,
         },
         {
-            title: 'Réservez quand vous voulez',
-            description: 'Réservation en ligne 24/7.',
+            title: t('offers.offer_2.title'),
+            description: t('offers.offer_2.description'),
             icon: <FaCalendarAlt />,
         },
         {
-            title: 'Un revenu stable',
-            description: 'Vous gagnez un revenu chaque mois (jusqu\'à 400 000 FCFA).',
+            title: t('offers.offer_3.title'),
+            description: t('offers.offer_3.description'),
             icon: <FaMoneyBillAlt />,
         },
         {
-            title: 'Engagement',
-            description: 'Notre relation est encadrée par un contrat.',
+            title: t('offers.offer_4.title'),
+            description: t('offers.offer_4.description'),
             icon: <FaHandshake />,
         },
         {
-            title: 'Des experts en Conduite',
-            description: 'Votre voiture est conduite uniquement par des chauffeurs pros.',
+            title: t('offers.offer_5.title'),
+            description: t('offers.offer_5.description'),
             icon: <FaUserTie />,
         },
         {
-            title: 'Maintenance',
-            description: 'Votre véhicule est entretenu dans un garage professionnel.',
+            title: t('offers.offer_6.title'),
+            description: t('offers.offer_6.description'),
             icon: <FaTools />,
         },
     ];
